@@ -6,14 +6,14 @@
 
 - link:
     ~/.bash_profile: .bash_profile
-    ~/.bashrc: .bashrc
+    ~/.bashrc:
+      force: true
+      path: bashrc
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.tmux.conf.local: .tmux.conf.local
     ~/.vim: .vim
-    ~/.vimrc:
-      relink: true
-      path: vimrc
+    ~/.vimrc: vimrc
     ~/.zshrc: .zshrc
 
 - shell:
