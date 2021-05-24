@@ -8,12 +8,12 @@
     ~/.bash_profile: .bash_profile
     ~/.bashrc:
       force: true
-      path: .bashrc
+      path: bashrc
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.tmux.conf.local: .tmux.conf.local
     ~/.vim: .vim
-    ~/.vimrc: .vimrc
+    ~/.vimrc: vimrc
     ~/.zshrc: .zshrc
 
 - shell:
