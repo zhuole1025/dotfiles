@@ -19,5 +19,16 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export SCALA_HOME=/usr/local/Cellar/scala/2.13.6
+
+export PATH=$PATH:$SCALA_HOME/bin
+
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.3.0/libexec
+
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+
+export SPARK_HOME=/Users/zhuole/spark
+
+export PATH=$PATH:$SPARK_HOME/bin
 
 source /Users/zhuole/.config/broot/launcher/bash/br

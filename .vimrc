@@ -193,5 +193,12 @@ noremap J 5j
 noremap K 5k
 noremap L 7l
 
-" Snippets for markdownn
+" Spelling Check with <space>sc
+map <LEADER>sc :set spell!<CR>
+
+" Press space twice to jump to the next '<++>' and edit it
+map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+
+" Snippets for markdown
 source ~/.vim/snippits.vim
+

@@ -6,3 +6,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[alias]
+	graph = log --all --graph --decorate --oneline
+[core]
+	excludesfile = /Users/zhuole/.gitignore_global
