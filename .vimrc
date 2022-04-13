@@ -1,5 +1,4 @@
-" Comments in Vimscript start with a `"`.
-
+" My Vimrc.
 " If you open this file in Vim, it'll be syntax highlighted for you.
 
 " Vim is based on Vi. Setting `nocompatible` switches from the default
@@ -46,7 +45,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
-
+Plug 'ferrine/md-img-paste.vim'
+"Plug 'lyokha/vim-xkbswitch'
+Plug 'ybian/smartim'
+Plug 'scrooloose/syntastic'
+Plug 'preservim/vimux'
+Plug 'mbbill/undotree'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " Set vim-airline
@@ -56,6 +61,33 @@ let g:airline#extensions#tabline#enabled = 1
 let g:lightline = {
 \ 'colorscheme': 'snazzy',
 \ }
+
+" Set the img-paste-md
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change
+" them
+" " let g:mdip_imgdir = 'img'
+" " let g:mdip_imgname = 'image'
+
+" Set the XkbSwitchlib
+"let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+"let g:XkbSwitchEnabled = 1
+
+" Set smartim
+let g:smartim_default = 'com.apple.keylayout.ABC' 
+
+" Set the syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_cpp_compiler = 'gcc'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -196,9 +228,13 @@ noremap L 7l
 " Spelling Check with <space>sc
 map <LEADER>sc :set spell!<CR>
 
+" Call Undotree
+nnoremap <LEADER>u :UndotreeToggle<CR>
+
 " Press space twice to jump to the next '<++>' and edit it
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 " Snippets for markdown
 source ~/.vim/snippits.vim
-
+autocmd InsertEnter * set timeoutlen=200
+autocmd InsertLeave * set timeoutlen=1000

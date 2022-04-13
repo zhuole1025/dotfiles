@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.bash_profile: .bash_profile
     ~/.bashrc:
       force: true
       path: .bashrc
@@ -13,7 +12,9 @@
     ~/.tmux.conf: .tmux.conf
     ~/.tmux.conf.local: .tmux.conf.local
     ~/.vim: .vim
-    ~/.vimrc: .vimrc
+    ~/.vimrc:
+      force: true
+      path: .vimrc
     ~/.zshrc: .zshrc
 
 - shell:

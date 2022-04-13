@@ -10,3 +10,5 @@
 	graph = log --all --graph --decorate --oneline
 [core]
 	excludesfile = /Users/zhuole/.gitignore_global
+	safecrlf = true
+	excludesfile = /Users/zhuole/.gitignore

@@ -31,4 +31,5 @@ export SPARK_HOME=/Users/zhuole/spark
 
 export PATH=$PATH:$SPARK_HOME/bin
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
 source /Users/zhuole/.config/broot/launcher/bash/br
